@@ -1,0 +1,59 @@
+.mainContainer {
+  margin: 25px;
+  display: flex;
+  .siteLogo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .servicesDiv {
+    width: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonDiv {
+    width: 20%;
+    min-width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .customButton {
+      padding: 12px 24px;
+      border-radius: 35px;
+      border: 1px solid #fa5b18;
+      position: relative;
+      overflow: visible;
+      background-color: transparent;
+      color: #fff; /* Default text color */
+      transition: background-color 1s ease, color 1s ease; /* Add transitions for background color and text color */
+    }
+
+    .customButton:hover {
+      background-color: #fa5b18;
+      border: 1px solid white; /* Change background color on hover */
+      color: #fff; /* Change text color on hover */
+    }
+
+    .customButton::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: right 1s ease, width 1s ease, height 1s ease; /* Add transitions for width and height */
+    }
+
+    .customButton:hover::after {
+      right: -40px;
+      width: 30px; /* Increase width on hover */
+      height: 30px; /* Increase height on hover */
+      transition: right 1s ease, width 1s ease, height 1s ease; /* Add transitions for width and height */
+    }
+  }
+}

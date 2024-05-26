@@ -1,0 +1,22 @@
+/* ScaleComponent.module.css */
+
+.scale {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  height: 80%;
+  width: 2px;
+  background-color: #ccc;
+}
+
+.pointer {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  transition: top 0.2s ease-in-out;
+}

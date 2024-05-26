@@ -1,0 +1,104 @@
+.whFull {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../../../public/assets/site-images/heroSpotsBackground.svg");
+  background-size: cover;
+  .mainNavigation {
+    width: 100%;
+    max-width: 1280px;
+    position: absolute;
+    top: 0%;
+  }
+  .mainDiv {
+    padding: 20px;
+    .headingDiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 465px;
+      max-width: 768px;
+      .contentDiv {
+        h1 {
+          font-weight: 800;
+          font-size: 72px;
+          line-height: 72px;
+          letter-spacing: -6px;
+          margin-bottom: 25px;
+        }
+      }
+      .buttonDiv {
+        .customButton {
+          padding: 12px 24px;
+          border-radius: 35px;
+          border: 1px solid #fa5b18;
+          position: relative;
+          overflow: visible;
+          background-color: transparent;
+          color: #fff; /* Default text color */
+          transition: background-color 1s ease, color 1s ease; /* Add transitions for background color and text color */
+        }
+
+        .customButton:hover {
+          background-color: #fa5b18;
+          border: 1px solid white; /* Change background color on hover */
+          color: #fff; /* Change text color on hover */
+        }
+
+        .customButton::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -10px;
+          transform: translateY(-50%);
+          width: 20px;
+          height: 20px;
+          background-color: #fff;
+          border-radius: 50%;
+          transition: right 1s ease, width 1s ease, height 1s ease; /* Add transitions for width and height */
+        }
+
+        .customButton:hover::after {
+          right: -40px;
+          width: 30px; /* Increase width on hover */
+          height: 30px; /* Increase height on hover */
+          transition: right 1s ease, width 1s ease, height 1s ease; /* Add transitions for width and height */
+        }
+      }
+    }
+  }
+  .slidersDiv {
+    height: 100px;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden; /* Hide scrollbar */
+    display: flex;
+    align-items: center;
+    .slidersInner {
+      display: flex;
+      animation: slide 10s linear infinite;
+      min-width: 125%;
+    }
+    .slidersInner img {
+      opacity: 0.5;
+      min-width: calc(10%);
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0); // Start from initial position
+  }
+  to {
+    transform: translateX(-100%); // Slide two items' worth to the left
+  }
+  // 100% {
+  //   transform: translateX(0); // Return to initial position for a smooth loop
+  // }
+}

@@ -1,0 +1,39 @@
+.callToActionSection {
+  width: calc(100% - 50px);
+  margin: 25px;
+  position: relative;
+  background-image: url("../../../public/assets//site-images/linedSphere.svg"),
+    url("../../../public/assets//site-images/circularElipse.svg"),
+    url("../../../public/assets//site-images/circularImg.svg");
+  background-repeat: no-repeat;
+  background-position: center, calc(50% + 100px) calc(50% - 150px),
+    calc(50% + 100px) calc(50% - 150px);
+  background-blend-mode: overlay;
+  min-height: 1000px;
+  .mainDiv {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .pRelative {
+      position: relative;
+      height: 50%;
+      h1 {
+        right: 15%;
+        position: absolute;
+        top: 0px;
+        font-size: 64px;
+        font-weight: 800;
+        line-height: 78px;
+        letter-spacing: -5px;
+      }
+      h2 {
+        left: 15%;
+        font-size: 32px;
+        line-height: 42px;
+        position: absolute;
+        bottom: 0px;
+      }
+    }
+  }
+}
